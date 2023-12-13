@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "YClzql51asOSWMDUbk7X4lBlhp5PTVORFwI5vsyQFbNDspvKQh4DLmrO4LYdIBEo7fd30JV+e6pAYcckPbpMoQ==",
+  "dgSpecHash": "MAkptLxc9S8mGOTrV4TL75r2Cn6Aat7ml7wrhvav/19h0T2liP8pLoD61LiHIpN651jq5JIApK98oLB1WjtHGQ==",
   "success": true,
   "projectFilePath": "/Users/mark/dev/cs/bkmarker/bkmarker/bkmarker.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/mark/.nuget/packages/dapper/2.1.24/dapper.2.1.24.nupkg.sha512",
+    "/Users/mark/.nuget/packages/microsoft.data.sqlite/7.0.14/microsoft.data.sqlite.7.0.14.nupkg.sha512",
+    "/Users/mark/.nuget/packages/microsoft.data.sqlite.core/7.0.14/microsoft.data.sqlite.core.7.0.14.nupkg.sha512",
+    "/Users/mark/.nuget/packages/oneof/3.0.263/oneof.3.0.263.nupkg.sha512",
+    "/Users/mark/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/mark/.nuget/packages/sqlitepclraw.core/2.1.4/sqlitepclraw.core.2.1.4.nupkg.sha512",
+    "/Users/mark/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.4/sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/mark/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.4/sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/mark/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/mark/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/mark/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.14/microsoft.netcore.app.host.osx-arm64.7.0.14.nupkg.sha512",
+    "/Users/mark/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
