@@ -1,0 +1,16 @@
+services:
+  proxy:
+    image: nginx
+    volumes:
+    - ./templates:/etc/nginx/templates
+    ports:
+    - "80:80"
+
+  bkmarker_web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - 4000:8080
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development

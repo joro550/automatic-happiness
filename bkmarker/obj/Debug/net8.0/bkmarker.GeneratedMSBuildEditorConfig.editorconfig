@@ -9,39 +9,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = bkmarker
 build_property.RootNamespace = bkmarker
-build_property.ProjectDir = /root/dev/bkmarker/bkmarker/
+build_property.ProjectDir = /Users/mark/dev/cs/bkmarker/bkmarker/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /root/dev/bkmarker/bkmarker
+build_property.MSBuildProjectDirectory = /Users/mark/dev/cs/bkmarker/bkmarker
 build_property._RazorSourceGeneratorDebug = 
 
-[/root/dev/bkmarker/bkmarker/Pages/Error.cshtml]
+[/Users/mark/dev/cs/bkmarker/bkmarker/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/root/dev/bkmarker/bkmarker/Pages/Index.cshtml]
+[/Users/mark/dev/cs/bkmarker/bkmarker/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/root/dev/bkmarker/bkmarker/Pages/Privacy.cshtml]
+[/Users/mark/dev/cs/bkmarker/bkmarker/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/root/dev/bkmarker/bkmarker/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/mark/dev/cs/bkmarker/bkmarker/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/root/dev/bkmarker/bkmarker/Pages/_ViewImports.cshtml]
+[/Users/mark/dev/cs/bkmarker/bkmarker/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/root/dev/bkmarker/bkmarker/Pages/_ViewStart.cshtml]
+[/Users/mark/dev/cs/bkmarker/bkmarker/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/root/dev/bkmarker/bkmarker/Pages/Shared/_Layout.cshtml]
+[/Users/mark/dev/cs/bkmarker/bkmarker/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yvk4bxpcwp

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/root/dev/bkmarker/bkmarker/bkmarker.csproj": {}
+    "/Users/mark/dev/cs/bkmarker/bkmarker/bkmarker.csproj": {}
   },
   "projects": {
-    "/root/dev/bkmarker/bkmarker/bkmarker.csproj": {
+    "/Users/mark/dev/cs/bkmarker/bkmarker/bkmarker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/root/dev/bkmarker/bkmarker/bkmarker.csproj",
+        "projectUniqueName": "/Users/mark/dev/cs/bkmarker/bkmarker/bkmarker.csproj",
         "projectName": "bkmarker",
-        "projectPath": "/root/dev/bkmarker/bkmarker/bkmarker.csproj",
-        "packagesPath": "/root/.nuget/packages/",
-        "outputPath": "/root/dev/bkmarker/bkmarker/obj/",
+        "projectPath": "/Users/mark/dev/cs/bkmarker/bkmarker/bkmarker.csproj",
+        "packagesPath": "/Users/mark/.nuget/packages/",
+        "outputPath": "/Users/mark/dev/cs/bkmarker/bkmarker/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "/Users/mark/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/root/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

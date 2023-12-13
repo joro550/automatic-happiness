@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nq6DCbKUr53GgXAjUPVl6Eph6g18D7eBbzlTzxwvNrvPhIbhu1KoJBEPBwDPsD3APgEefdv/SaBiObPg6ZRznQ==",
+  "dgSpecHash": "YClzql51asOSWMDUbk7X4lBlhp5PTVORFwI5vsyQFbNDspvKQh4DLmrO4LYdIBEo7fd30JV+e6pAYcckPbpMoQ==",
   "success": true,
-  "projectFilePath": "/root/dev/bkmarker/bkmarker/bkmarker.csproj",
+  "projectFilePath": "/Users/mark/dev/cs/bkmarker/bkmarker/bkmarker.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

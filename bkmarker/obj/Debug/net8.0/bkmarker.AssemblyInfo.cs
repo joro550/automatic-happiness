@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bkmarker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fefe8c0d7f66dc0f5695ba597de069fed9d49c76")]
 [assembly: System.Reflection.AssemblyProductAttribute("bkmarker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bkmarker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

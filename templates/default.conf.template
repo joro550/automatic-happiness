@@ -1,0 +1,12 @@
+
+server {
+  listen 80;
+
+  location / {
+    return 200;
+  }
+
+  location /bkmarker/ {
+    proxy_pass http://bkmarker_web:8080/;
+  }
+}
