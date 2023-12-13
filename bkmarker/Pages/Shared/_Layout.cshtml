@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - bkmarker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="p-5 bg-red-200 flex justify-between">
+      <div class='pr-5 text-2xl font-bold'>bkmarker</div>
+      <div class='w-full'>
+        <input class='border border-gray-100 shadow
+          rounded-lg p-2 text-sm block
+          focus:ring-blue-500 focus:border-blue-500 w-full pr-3'
+
+          placeholder='Search'
+
+        />
+      </div>
+
+
+    </header>
+
+    <div class="p-5 bg-blue-100">
+      <div class='container mx-auto bg-yellow-100 '>
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+      </div>
+    </div>
+
+    <footer class="fixed bottom-0 left-0">
+        <div class="container">
+            &copy; 2023 - bkmarker - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
