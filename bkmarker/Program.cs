@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddTransient<ConnectionString>(_ => new ConnectionString("db=bkmarker.db"));
+builder.Services.AddTransient<ConnectionString>(_ => new ConnectionString("Data Source=bkmarker.db"));
 builder.Services.AddTransient<IRepository, Repository>();
 
 var app = builder.Build();
