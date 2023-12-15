@@ -1,4 +1,7 @@
 using bkmarker;
+using bkmarker.Migrations;
+
+Runner.MigrateUp();
 
 var builder = WebApplication.CreateBuilder(args);
 

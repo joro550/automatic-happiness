@@ -7,6 +7,6 @@ server {
   }
 
   location /bkmarker/ {
-    proxy_pass http://bkmarker_web:8080/;
+    proxy_pass http://bkmarker_web:80/;
   }
 }
