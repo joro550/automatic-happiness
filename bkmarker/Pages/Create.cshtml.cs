@@ -44,39 +44,30 @@ public class CreateModel : PageModel
         doc.LoadHtml(await response.Content.ReadAsStringAsync());
 
         var titleNode = doc.DocumentNode.SelectSingleNode("//title");
-        var article = doc.DocumentNode.SelectSingleNode("//article");
-        var picture = doc.DocumentNode.SelectNodes("//picture")
-          .FirstOrDefault();
+        var article = doc.DocumentNode.SelectSingleNode("//html/head/meta[@name='description']")
+            .GetAttributeValue("content", "");
 
-        _logger.LogInformation("Time for information [Do we have the picture: {Picture}]", picture?.InnerHtml);
-        _logger.LogInformation("Time for information [Do we have the article: {Article}]", article != null);
+        var favicons = doc.DocumentNode.SelectNodes("//html/head/link[@rel='icon']")
+          .Select(Image.Parse)
+          .MaxBy(x => x.Size);
 
-        var source = picture?.GetAttributeValue("src", "");
-        var altText = picture?.GetAttributeValue("alt", "");
 
-        _logger.LogInformation("Time for information [Do we have the source: {Source}]", source);
-        _logger.LogInformation("Time for information [Do we have the AltText: {AltText}]", altText);
+        _logger.LogInformation("Has Favicon [{Favicon}]", favicons != null);
 
         await _repository.WithConnection(async con =>
         {
             await con.ExecuteAsync(
                @"insert into bookmarks (url, content, image_url, image_alt_text, title)
-               values (@url, @content, @imageUrl, @imageAltText, @title)",
+               values (@url, @content, @imageUrl, @title)",
                new
                {
                    url = Bookmark!.Url,
-                   content = article?.InnerHtml ?? "",
-                   imageUrl = source ?? "",
-                   imageAltText = altText ?? "",
+                   content = article ?? "",
+                   imageUrl = favicons?.Url ?? "",
                    title = titleNode.InnerText
                });
         });
 
         return RedirectToPage("./Index");
     }
-}
-
-public class CreateBookmarkModel
-{
-    public string Url { get; set; } = string.Empty;
 }

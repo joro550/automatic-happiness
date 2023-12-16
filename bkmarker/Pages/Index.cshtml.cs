@@ -40,4 +40,12 @@ public class Bookmark
     public string? Content { get; set; }
     public string? ImageUrl { get; set; }
     public string? ImageAltText { get; set; }
+
+    public string GetImageUrl()
+    {
+        var uri = new Uri(Url);
+        var baseUrl = uri.GetLeftPart(UriPartial.Path);
+
+        return $"{baseUrl}{ImageUrl}";
+    }
 }
