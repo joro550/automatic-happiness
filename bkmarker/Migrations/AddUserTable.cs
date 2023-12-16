@@ -10,7 +10,8 @@ public class AddUserTable : Migration
         Create.Table("users")
           .WithColumn("id").AsInt64().PrimaryKey().Identity()
           .WithColumn("email").AsString()
-          .WithColumn("password").AsString();
+          .WithColumn("password").AsString()
+          .WithColumn("is_admin").AsBoolean();
     }
 
     public override void Down()
