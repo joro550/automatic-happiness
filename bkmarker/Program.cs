@@ -1,5 +1,6 @@
 using bkmarker;
 using bkmarker.Migrations;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var connectionString
   = new ConnectionString("Data Source=bkmarker.db");
@@ -13,6 +14,12 @@ builder.Services.AddRazorPages();
 builder.Services.AddTransient<ConnectionString>(_ => connectionString);
 builder.Services.AddTransient<IRepository, Repository>();
 builder.Services.AddHttpClient();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+    {
+        options.LoginPath = "/Login";
+    });
 
 var app = builder.Build();
 
@@ -30,6 +37,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapRazorPages();
 
