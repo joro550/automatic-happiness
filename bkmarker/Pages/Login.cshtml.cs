@@ -28,7 +28,7 @@ public class LoginModel : PageModel
         await HttpContext.SignInAsync(
                 new ClaimsPrincipal(
                     new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme, "user", "role")));
-        return Redirect("./SecretPage");
+        return Redirect("./Index");
     }
 }
 
