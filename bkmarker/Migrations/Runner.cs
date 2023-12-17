@@ -2,7 +2,7 @@ using FluentMigrator.Runner;
 
 namespace bkmarker.Migrations;
 
-class Runner
+internal class Runner
 {
     public static void MigrateUp(ConnectionString connectionString)
     {

@@ -1,3 +1,4 @@
+using bkmarker.Services;
 using Dapper;
 using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc;
@@ -40,6 +41,8 @@ public class CreateModel : PageModel
         if (!response.IsSuccessStatusCode)
             return Page();
 
+        var user = await HttpContext.GetLoggedInUser(_repository);
+
         var doc = new HtmlDocument();
         doc.LoadHtml(await response.Content.ReadAsStringAsync());
 
@@ -51,13 +54,12 @@ public class CreateModel : PageModel
           .Select(Image.Parse)
           .MaxBy(x => x.Size);
 
-
         _logger.LogInformation("Has Favicon [{Favicon}]", favicons != null);
 
         await _repository.WithConnection(async con =>
         {
             await con.ExecuteAsync(
-               @"insert into bookmarks (url, content, image_url, image_alt_text, title)
+               @"insert into bookmarks (url, content, image_url, title)
                values (@url, @content, @imageUrl, @title)",
                new
                {

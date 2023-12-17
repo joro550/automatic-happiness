@@ -1,9 +1,9 @@
-using System.Security.Claims;
 using Dapper;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace bkmarker.Pages.Account;
 
@@ -24,24 +24,29 @@ public class LoginModel : PageModel
     public async Task<IActionResult> OnPostAsync([FromQuery] string returnUrl)
     {
         var users = await _repository.WithConnection(async con =>
-        {
-            return await con.QueryAsync<User>(@"SELECT email, password, is_admin from users
-                    where email = @email", new { email = LoginRequest!.Username });
-        });
+          await con.QueryAsync<User>(@"SELECT id, email, password, is_admin from users
+            where email = @email", new { email = LoginRequest!.Username })
+        );
 
         if (!users.Any() || users.Count() > 1)
+        {
+            _logger.LogInformation("No user was found [{UserCount}]", users.Count());
             return Page();
+        }
 
         var user = users.First();
         var passwordCheck = BCrypt.Net.BCrypt.Verify(LoginRequest!.Password, user.Password);
         if (!passwordCheck)
+        {
+            _logger.LogInformation("Password is not correct");
             return Page();
+        }
 
         _logger.LogInformation("User is logging in");
         var claims = new List<Claim>()
         {
-            new Claim("user", LoginRequest!.Username),
-            new Claim("role", "member")
+            new Claim(ClaimTypes.Email, LoginRequest!.Username),
+            new Claim(ClaimTypes.Role, "member")
         };
 
         await HttpContext.SignInAsync(
@@ -51,9 +56,8 @@ public class LoginModel : PageModel
         if (!string.IsNullOrEmpty(returnUrl))
         {
             return Redirect(returnUrl);
-
         }
-        return Redirect("./Index");
+        return Redirect("~/Index");
     }
 }
 
@@ -65,6 +69,7 @@ public class LoginRequest
 
 public class User
 {
+    public int Id { get; set; }
     public string Username { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
     public bool IsAdmin { get; set; } = false;
