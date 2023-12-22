@@ -24,7 +24,7 @@ public class LoginModel : PageModel
     public async Task<IActionResult> OnPostAsync([FromQuery] string returnUrl)
     {
         var users = await _repository.WithConnection(async con =>
-          await con.QueryAsync<User>(@"SELECT id, email, password, is_admin from users
+          await con.QueryAsync<User>(@"SELECT email, password, is_admin from users
             where email = @email", new { email = LoginRequest!.Username })
         );
 
@@ -49,9 +49,9 @@ public class LoginModel : PageModel
             new Claim(ClaimTypes.Role, "member")
         };
 
-        await HttpContext.SignInAsync(
-                new ClaimsPrincipal(
-                    new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme, "user", "role")));
+        var identity =
+          new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme, ClaimTypes.Email, ClaimTypes.Role);
+        await HttpContext.SignInAsync(new ClaimsPrincipal(identity));
 
         if (!string.IsNullOrEmpty(returnUrl))
         {

@@ -20,6 +20,5 @@ public static class HttpContextExtensions
           );
         return users == null ? new NotFound() : users;
     }
-
 }
 
